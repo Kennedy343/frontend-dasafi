@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+
+
+import CatalogoPage from './pages/catalogo/CatalogoPage'; // Asegúrate de que la ruta sea correcta
+
+// NOTA: Para que Tailwind funcione, asegúrate de que tu index.css (o similar) 
+// esté importando las directivas de Tailwind y que App.jsx se renderice en tu index.js.
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    // Aplicamos una clase oscura al fondo para simular el diseño original
+    // del fondo del body/html
+    <div className="bg-gray-900 min-h-screen"> 
+      {/* El CatalogoPage contiene el Header y todo el contenido del catálogo */}
+      <CatalogoPage />
+      
+      {/* Si el diseño final requiere un Footer global, iría aquí, 
+        fuera del CatalogoPage, o dentro de él si es específico de la vista.
+      */}
+    </div>
+  );
 }
 
-export default App
+export default App;
