@@ -63,7 +63,7 @@ const InventoryView: React.FC = () => {
             <div className="bg-gray-800 p-4 rounded-lg shadow-md mb-8 flex flex-wrap items-center gap-4">
                 
                 {/* Campo de Búsqueda */}
-                <div className="flex items-center flex-grow max-w-sm">
+                <div className="flex items-center grow max-w-sm">
                     <input
                         type="text"
                         value={searchTerm}

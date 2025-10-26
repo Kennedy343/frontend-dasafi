@@ -1,11 +1,9 @@
 // src/views/DashboardView.tsx (CONTENIDO REAL DEL DASHBOARD DE INICIO)
-import React from 'react';
 import type { FC } from 'react';
 // Importa SOLO los componentes necesarios para la VISTA DE INICIO
 import MetricCard from '../components/MetricCard'; 
 import SalesReportCard from '../components/SalesReportCard'; 
 import RoleManagementTable from '../components/RoleManagementTable'; 
-import { FaBox, FaClock, FaCalendarAlt } from 'react-icons/fa'; // Asegúrate de importar los iconos
 
 const DashboardView: FC = () => {
     // La lógica de navegación y Sidebar NO DEBEN estar aquí.
