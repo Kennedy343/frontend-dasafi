@@ -55,14 +55,26 @@ const DashboardView: React.FC = () => {
                 </div>
 
                 {/* 3. Acciones Rápidas */}
-                <div className="mb-8"> 
-                    {/* 🛑 CORRECCIÓN: Título de sección a gris oscuro */}
+              <div className="mb-8"> 
+                    {/* Título de sección a gris oscuro */}
                     <h2 className="text-2xl font-semibold mb-4 text-gray-800">Acciones Rápidas</h2>
                     <div className="flex space-x-4">
-                        <button className="bg-primary-blue hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                        
+                        {/* 🛑 CORRECCIÓN: Botón "Ingresar Nuevo Producto" 
+                           - Fondo por defecto: Azul (bg-blue-600)
+                           - Hover: Gris (hover:bg-gray-300) 
+                           - Texto: Negro (text-black)
+                        */}
+                        <button className="bg-blue-600 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded transition duration-150">
                             Ingresar Nuevo Producto
                         </button>
-                        <button className="bg-secondary-gray hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                        
+                        {/* Botón "Ver Pedidos Personalizados" (se mantiene la lógica estándar para este) 
+                           - Fondo por defecto: Gris (bg-gray-300)
+                           - Hover: Gris más oscuro (hover:bg-gray-400) 
+                           - Texto: Negro (text-black)
+                        */}
+                        <button className="bg-blue-600 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded transition duration-150">
                             Ver Pedidos Personalizados
                         </button>
                     </div>
