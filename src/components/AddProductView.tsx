@@ -1,4 +1,5 @@
 // src/components/AddProductView.tsx (Con Tailwind CSS)
+// ingreso de productos 
 import React, { useState } from 'react';
 import { FaPlusCircle, FaSave } from 'react-icons/fa';
 
@@ -48,7 +49,7 @@ const AddProductView: React.FC = () => {
         <div className="p-8 bg-dark-bg min-h-screen text-gray-100">
             
             {/* Título Principal */}
-            <h1 className="text-3xl font-bold mb-2 flex items-center text-white">
+            <h1 className="text-3xl font-bold mb-2 flex items-center text-black">
                 <FaPlusCircle className="mr-3 text-sky-400" /> Ingresar Nuevo Producto al Inventario
             </h1>
             <p className="text-gray-400 mb-8">
@@ -58,14 +59,14 @@ const AddProductView: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-8">
                 
                 {/* Bloque 1: Detalles Esenciales */}
-                <section className="bg-gray-800 p-6 rounded-lg shadow-xl">
-                    <h2 className="text-2xl font-semibold mb-6 text-white border-b border-gray-700 pb-2">Detalles Esenciales</h2>
+                <section className="bg-white p-6 rounded-lg shadow-xl">
+                    <h2 className="text-2xl font-semibold mb-6 text-black border-b border-gray-700 pb-2">Detalles Esenciales</h2>
                     
                     {/* Cuadrícula de 2 columnas para campos esenciales */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Campo 1: Nombre del Producto */}
                         <div>
-                            <label className="block text-gray-300 font-semibold mb-2">Nombre del Producto</label>
+                            <label className="block text-gray-800 font-semibold mb-2">Nombre del Producto</label>
                             <input
                                 type="text"
                                 value={name}
@@ -78,7 +79,7 @@ const AddProductView: React.FC = () => {
                         
                         {/* Campo 2: Código SKU / Referencia */}
                         <div>
-                            <label className="block text-gray-300 font-semibold mb-2">Código SKU / Referencia</label>
+                            <label className="block text-gray-800 font-semibold mb-2">Código SKU / Referencia</label>
                             <input
                                 type="text"
                                 value={sku}
@@ -91,7 +92,7 @@ const AddProductView: React.FC = () => {
 
                         {/* Campo 3: Categoría (Dropdown) */}
                         <div>
-                            <label className="block text-gray-300 font-semibold mb-2">Categoría</label>
+                            <label className="block text-gray-800 font-semibold mb-2">Categoría</label>
                             <select
                                 value={category}
                                 onChange={(e) => setCategory(e.target.value)}
@@ -107,7 +108,7 @@ const AddProductView: React.FC = () => {
                         
                         {/* Campo 4: Stock Inicial */}
                         <div>
-                            <label className="block text-gray-300 font-semibold mb-2">Stock Inicial</label>
+                            <label className="block text-gray-800 font-semibold mb-2">Stock Inicial</label>
                             <input
                                 type="number"
                                 value={stock}
@@ -121,14 +122,14 @@ const AddProductView: React.FC = () => {
                 </section>
 
                 {/* Bloque 2: Precios y Costos */}
-                <section className="bg-gray-800 p-6 rounded-lg shadow-xl">
-                    <h2 className="text-2xl font-semibold mb-6 text-white border-b border-gray-700 pb-2">Precios y Costos</h2>
+                <section className="bg-white p-6 rounded-lg shadow-xl">
+                    <h2 className="text-2xl font-semibold mb-6 text-black border-b border-gray-700 pb-2">Precios y Costos</h2>
 
                     {/* Cuadrícula de 2 columnas para precios */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Campo 5: Costo Unitario */}
                         <div>
-                            <label className="block text-gray-300 font-semibold mb-2">$ Costo Unitario</label>
+                            <label className="block text-gray-800 font-semibold mb-2">$ Costo Unitario</label>
                             <input
                                 type="text" // Usar text para permitir símbolos, validar formato después
                                 value={cost}
@@ -140,7 +141,7 @@ const AddProductView: React.FC = () => {
                         
                         {/* Campo 6: Precio de Venta */}
                         <div>
-                            <label className="block text-gray-300 font-semibold mb-2">$ Precio de Venta</label>
+                            <label className="block text-gray-800 font-semibold mb-2">$ Precio de Venta</label>
                             <input
                                 type="text" // Usar text para permitir símbolos, validar formato después
                                 value={price}
@@ -154,8 +155,8 @@ const AddProductView: React.FC = () => {
                 </section>
                 
                 {/* Bloque 3: Descripción Detallada (Campo completo) */}
-                <section className="bg-gray-800 p-6 rounded-lg shadow-xl">
-                    <h2 className="text-2xl font-semibold mb-6 text-white border-b border-gray-700 pb-2">Descripción Detallada</h2>
+                <section className="bg-white p-6 rounded-lg shadow-xl">
+                    <h2 className="text-2xl font-semibold mb-6 text-black border-b border-gray-700 pb-2">Descripción Detallada</h2>
                     
                     {/* Campo 7: Descripción */}
                     <div>

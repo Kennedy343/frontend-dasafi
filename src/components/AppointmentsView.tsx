@@ -1,4 +1,5 @@
 // src/components/AppointmentsView.tsx (Con Tailwind CSS)
+// gestion de citas agendadas 
 import React, { useState } from 'react';
 import { FaCalendarAlt, FaSearch, FaPlus, FaTrashAlt, FaEdit, FaCheckCircle, FaExclamationCircle, FaUserCircle, FaTools } from 'react-icons/fa';
 
@@ -64,7 +65,7 @@ const AppointmentsView: React.FC = () => {
     };
 
     return (
-        // Contenedor principal con fondo oscuro y padding
+        // Contenedor principal con fondo claro
         <div className="p-8 bg-dark-bg min-h-screen text-gray-100">
             
             {/* Título y Descripción */}
