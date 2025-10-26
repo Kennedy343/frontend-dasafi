@@ -1,4 +1,4 @@
-// src/components/CustomOrdersView.tsx (Con Tailwind CSS)
+// src/components/CustomOrdersView.tsx (CÓDIGO FINAL AJUSTADO)
 import React, { useState } from 'react';
 import { FaShoppingCart, FaPlus, FaHistory, FaEye, FaUserTag } from 'react-icons/fa';
 
@@ -16,8 +16,8 @@ interface CustomOrder {
 const mockOrders: CustomOrder[] = [
     { id: 501, client: 'María Soto', date: '2025-10-20', description: 'Bicicleta Montaña Personalizada', value: '$1,850.00', status: 'En Proceso' },
     { id: 502, client: 'Pedro Gómez', date: '2025-10-25', description: 'Kit de Calcomanías Personalizadas', value: '$45.50', status: 'Cotización' },
-    { id: 503, client: 'Felipe Reyes', date: '2025-10-10', description: 'Asiento de Gel Ergonómico XL', value: '$120.99', status: 'Enviado' },
-    { id: 504, client: 'Ana Díaz', date: '2025-10-10', description: 'Mantenimiento preventivo anual', value: '$80.00', status: 'Entregado' },
+    { id: 503, client: 'Felipe Reyes', date: '2025-10-10', description: 'Asiento de Gel Ergonómico XL', value: '$120.99', status: 'Enviado' }, // En la imagen, el color es morado.
+    { id: 504, client: 'Ana Díaz', date: '2025-10-10', description: 'Mantenimiento preventivo anual', value: '$80.00', status: 'Entregado' }, // En la imagen, el color es verde.
 ];
 
 // --- Funciones de estilo dinámico (Tailwind) ---
@@ -26,8 +26,8 @@ const getStatusClasses = (status: CustomOrder['status']) => {
     switch (status) {
         case 'En Proceso': return 'bg-sky-600 text-white';
         case 'Cotización': return 'bg-orange-500 text-gray-900';
-        case 'Enviado': return 'bg-purple-600 text-white'; // Usamos purple en lugar de verde para diferenciar de "Completado"
-        case 'Entregado': return 'bg-green-600 text-white';
+        case 'Enviado': return 'bg-purple-700 text-white'; // AJUSTADO a Morado
+        case 'Entregado': return 'bg-green-600 text-white'; // Verde para Entregado
         default: return 'bg-gray-500 text-white';
     }
 };
@@ -98,20 +98,20 @@ const CustomOrdersView: React.FC = () => {
                                 <tr key={order.id} className="hover:bg-gray-700 transition duration-150">
                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400">{order.id}</td>
                                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white flex items-center">
-                                        {/* Icono de persona simulado con Tailwind */}
                                         <FaUserTag className="mr-2 w-4 h-4 text-sky-400"/> {order.client}
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">{order.date}</td>
                                     <td className="px-6 py-4 text-sm text-gray-300 max-w-sm truncate">{order.description}</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-green-400">{order.value}</td>
+                                    
+                                    {/* AJUSTADO: Color del Valor Total a cyan-400 para coincidir con el diseño */}
+                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold **text-cyan-400**">{order.value}</td>
+                                    
                                     <td className="px-6 py-4 whitespace-nowrap text-sm">
-                                        {/* Insignia de Estado */}
                                         <span className={`inline-flex px-3 py-1 text-xs font-semibold leading-5 rounded-full ${getStatusClasses(order.status)}`}>
                                             {order.status}
                                         </span>
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-                                        {/* Botón Ver (Ojo) */}
                                         <button
                                             title="Ver Detalles"
                                             onClick={() => handleViewOrder(order.id)}

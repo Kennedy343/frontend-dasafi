@@ -1,7 +1,5 @@
-// src/components/Sidebar.tsx (Código Corregido)
+// src/components/Sidebar.tsx (CÓDIGO FINAL CORREGIDO)
 import React from 'react';
-// ✅ CORRECCIÓN: Usamos 'import type' para IconType para eliminar la advertencia de valor no leído.
-
 import { 
     FaHome, FaBoxes, FaPlusCircle, FaShoppingCart, FaCalendarAlt, 
     FaTools, FaChartLine, FaUsers, FaUserTag, FaStar, FaPowerOff 
@@ -9,16 +7,17 @@ import {
 
 // Definición de las vistas/rutas disponibles
 const menuItems = [
+    // Usamos el 'name' como el valor de 'view' que se envía al Layout
     { name: 'Inicio', icon: FaHome, view: 'Inicio' },
-    { name: 'Inventario', icon: FaBoxes, view: 'InventoryView' },
-    { name: 'Ingresar Productos', icon: FaPlusCircle, view: 'AddProductView' },
-    { name: 'Pedidos Personalizados', icon: FaShoppingCart, view: 'CustomOrdersView' },
-    { name: 'Citas Agendadas', icon: FaCalendarAlt, view: 'AppointmentsView' },
-    { name: 'Servicios de Taller', icon: FaTools, view: 'WorkshopServicesView' },
-    { name: 'Reporte de Ventas', icon: FaChartLine, view: 'SalesReportView' },
-    { name: 'Gestión de Usuarios', icon: FaUsers, view: 'UserManagementView' },
-    { name: 'Gestión de Roles', icon: FaUserTag, view: 'RoleManagementView' },
-    { name: 'Gestión de Reseñas', icon: FaStar, view: 'ReviewManagementView' },
+    { name: 'Inventario', icon: FaBoxes, view: 'Inventario' }, // <-- CORRECCIÓN
+    { name: 'Ingresar Productos', icon: FaPlusCircle, view: 'Ingresar Productos' }, // <-- CORRECCIÓN
+    { name: 'Pedidos Personalizados', icon: FaShoppingCart, view: 'Pedidos Personalizados' }, // <-- CORRECCIÓN
+    { name: 'Citas Agendadas', icon: FaCalendarAlt, view: 'Citas Agendadas' }, // <-- CORRECCIÓN
+    { name: 'Servicios de Taller', icon: FaTools, view: 'Servicios de Taller' }, // <-- CORRECCIÓN
+    { name: 'Reporte de Ventas', icon: FaChartLine, view: 'Reporte de Ventas' }, // <-- CORRECCIÓN
+    { name: 'Gestión de Usuarios', icon: FaUsers, view: 'Gestión de Usuarios' }, // <-- CORRECCIÓN
+    { name: 'Gestión de Roles', icon: FaUserTag, view: 'Gestión de Roles' }, // <-- CORRECCIÓN
+    { name: 'Gestión de Reseñas', icon: FaStar, view: 'Gestión de Reseñas' }, // <-- CORRECCIÓN
 ];
 
 interface SidebarProps {
@@ -44,7 +43,6 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onNavigate }) => {
             </div>
 
             {/* Menú de Navegación */}
-            {/* ✅ CORRECCIÓN: Se cambia 'flex-grow' por 'grow' (clase canónica de Tailwind). */}
             <nav className="grow p-4 space-y-1 overflow-y-auto"> 
                 {menuItems.map((item) => {
                     const isActive = currentView === item.view;
