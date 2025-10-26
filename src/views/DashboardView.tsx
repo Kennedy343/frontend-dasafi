@@ -26,9 +26,8 @@ const DashboardView: React.FC = () => {
 
             {/* Contenido principal del Dashboard */}
             {/* ✅ CORRECCIÓN CLAVE: Agregamos 'min-w-0' para que el elemento 'flex-1' no sea ignorado y se respete el espacio disponible. */}
-            <div className="flex-1 p-8 overflow-y-auto min-w-0">
+            <div className="flex-1 p-8 overflow-y-auto min-w-0 pl-64">
                 <h1 className="text-3xl font-bold mb-6">Dashboard de Administrador</h1>
-
                 {/* 2. Cards de Métricas */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> 
                     <MetricCard 
