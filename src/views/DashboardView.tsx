@@ -30,7 +30,7 @@ const DashboardView: React.FC = () => {
             {/* 🛑 CORRECCIÓN: Agregué bg-gray-100 aquí para simular el fondo claro de tu imagen */}
             
                 {/* 🛑 CORRECCIÓN: Título principal a gris oscuro */}
-                <h1 className="text-3xl font-bold mb-6 text-gray-800">Dashboard de Administrador</h1>
+                <h1 className="text-3xl font-bold mb-6 text-gray-800">Vista de Administrador</h1>
                 
                 {/* 2. Cards de Métricas */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> 
@@ -57,7 +57,7 @@ const DashboardView: React.FC = () => {
                 {/* 3. Acciones Rápidas */}
               <div className="mb-8"> 
                     {/* Título de sección a gris oscuro */}
-                    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Acciones Rápidas</h2>
+                    <h2 className="text-3xl font-bold mb-6 text-gray-800">Acciones Rápidas</h2>
                     <div className="flex space-x-4">
                         
                         {/* 🛑 CORRECCIÓN: Botón "Ingresar Nuevo Producto" 
@@ -83,14 +83,14 @@ const DashboardView: React.FC = () => {
                 {/* 4. Reporte de Ventas */}
                 <div className="mb-8"> 
                     {/* 🛑 CORRECCIÓN: Título de sección a gris oscuro */}
-                    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Reporte de Ventas (Últimos 30 días)</h2>
+                    <h2 className="text-3xl font-bold mb-6 text-gray-800">Reporte de Ventas (Últimos 30 días)</h2>
                     <SalesReportCard />
                 </div>
 
                 {/* 5. Gestión de Roles */}
                 <div>
                     {/* 🛑 CORRECCIÓN: Título de sección a gris oscuro */}
-                    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Gestión de Roles</h2>
+                    <h2 className="text-3xl font-bold mb-6 text-gray-800">Gestión de Roles</h2>
                     <RoleManagementTable />
                 </div>
 
