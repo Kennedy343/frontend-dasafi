@@ -1,7 +1,7 @@
 //Gestion de Inventario 
 import React, { useState, useCallback, useEffect } from 'react';
 // Íconos reemplazados: FaBoxes, FaPlus, FaSearch, FaEdit, FaTrashAlt, FaTimes, FaSave
-import { Boxes, Plus, Search, Edit, Trash2, X, Save, DollarSign, Package, Tag, Loader2, List, ClipboardCopy } from 'lucide-react';
+import { Boxes, Plus, Search, Edit, Trash2, X, Save, Package, Tag, Loader2, List, ClipboardCopy } from 'lucide-react';
 
 // --- INTERFACES Y DATOS ---
 
@@ -257,21 +257,25 @@ const ProductFormModal: React.FC<ProductFormModalProps> = ({ isOpen, onClose, is
                             />
                         </div>
                         
-                        {/* Campo Precio */}
-                        <div>
-                            <label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-1 items-center"><DollarSign className="mr-1 w-4 h-4 text-sky-600"/> Precio Unitario ($)</label>
-                            <input
-                                id="price"
-                                name="price"
-                                type="number"
-                                step="0.01"
-                                value={formData.price}
-                                onChange={handleChange}
-                                min="0"
-                                required
-                                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-sky-500 focus:border-sky-500 bg-white text-gray-900 shadow-sm"
-                            />
-                        </div>
+                      {/* Campo Precio */}
+<div>
+    {/* Cambiado: Eliminado el icono DollarSign y añadido "Q:" como texto. */}
+    <label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-1 items-center">
+        <span className="text-sky-600 font-bold mr-1">Q:</span> 
+        Precio Unitario
+    </label>
+    <input
+        id="price"
+        name="price"
+        type="number"
+        step="0.01"
+        value={formData.price}
+        onChange={handleChange}
+        min="0"
+        required
+        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-sky-500 focus:border-sky-500 bg-white text-gray-900 shadow-sm"
+    />
+</div>
                     </div>
                 </div>
 
