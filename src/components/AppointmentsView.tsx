@@ -1,3 +1,4 @@
+// Gestión de Citas Agendadas
 // src/components/AppointmentsView.tsx (Tema Claro y Funcional)
 import React, { useState, useMemo, useEffect } from 'react';
 
@@ -35,7 +36,7 @@ const mockAppointments: Appointment[] = [
 ];
 
 const availableStatuses: Appointment['status'][] = ['Confirmada', 'Pendiente', 'Completada', 'Cancelada'];
-const availableServices = ['Mantenimiento General', 'Revisión de Frenos', 'Cambio de Neumático', 'Diagnóstico Eléctrico', 'Servicio de Detallado'];
+const availableServices = ['Mantenimiento', 'Revisión de Frenos', 'Cambio de Neumático', 'Diagnóstico Eléctrico', 'Servicio de Detallado'];
 
 
 // --- MODAL DE CREACIÓN/EDICIÓN DE CITA ---
@@ -107,7 +108,7 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose, ap
     const title = appointmentToEdit ? 'Editar Cita' : 'Agendar Nueva Cita';
 
     return (
-        // Overlay (Fondo oscuro transparente)
+        // Overlay (Fondo claro transparente)
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-70 backdrop-blur-sm p-4">
             {/* Contenedor del Modal (Tarjeta blanca/clara) */}
             <div className="bg-white rounded-xl shadow-2xl w-full max-w-lg transform transition-all scale-100 border border-gray-200">

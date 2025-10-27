@@ -1,3 +1,4 @@
+//Gestion de Pedidos Personalizados 
 import React, { useState, useCallback, useEffect } from 'react';
 // Íconos reemplazados: FaShoppingCart, FaPlus, FaHistory, FaEye, FaUserTag
 import { ShoppingCart, Plus, Eye, User, X, Save, Tag, DollarSign, Calendar, FileText, Loader2 } from 'lucide-react';

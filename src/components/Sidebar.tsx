@@ -1,3 +1,4 @@
+// Barra de la izquierda 
 // src/components/Sidebar.tsx (CÓDIGO FINAL CORREGIDO)
 import React from 'react';
 import { 
