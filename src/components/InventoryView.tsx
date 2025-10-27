@@ -340,13 +340,6 @@ const InventoryView: React.FC = () => {
         setIsModalOpen(false);
         setEditingProduct(undefined); 
     };
-
-    // FUNCIÓN: Abre el modal para AÑADIR
-    const handleAddProduct = () => {
-        setEditingProduct(undefined); // Modo Añadir
-        setIsModalOpen(true);
-    };
-
     // FUNCIÓN: Abre el modal para EDITAR
     const handleEdit = (id: number) => {
         const productToEdit = products.find(p => p.id === id);
@@ -384,7 +377,8 @@ const InventoryView: React.FC = () => {
         if (!confirmAction) return null;
         
         return (
-            <div className="fixed inset-0 bg-gray-900 bg-opacity-70 flex justify-center items-center z-110 p-4">
+                   // Overlay (Fondo claro transparente)
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-70 backdrop-blur-sm p-4">
                 <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-2xl max-w-sm w-full text-gray-900">
                     <h4 className="text-xl font-bold text-red-600 mb-3">Confirmar Eliminación</h4>
                     <p className="mb-6 text-gray-700">{confirmAction.message}</p>
@@ -439,14 +433,6 @@ const InventoryView: React.FC = () => {
                             <Search className="w-5 h-5" />
                         </button>
                     </div>
-
-                    {/* Botón Añadir Nuevo Producto */}
-                    <button
-                        onClick={handleAddProduct} // Llama a la función que abre el modal
-                        className="flex items-center justify-center bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-150 shadow-md hover:shadow-lg transform hover:scale-[1.01] sm:ml-auto"
-                    >
-                        <Plus className="mr-2 w-5 h-5" /> Añadir Nuevo Producto
-                    </button>
                 </div>
 
                 {/* Sección de la Tabla de Inventario */}
