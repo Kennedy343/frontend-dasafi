@@ -1,4 +1,5 @@
 // src/components/SalesReportView.tsx (Con Tailwind CSS)
+// reporte de ventas detallado
 import React, { useState } from 'react';
 import { FaChartLine, FaCalendarAlt, FaDollarSign, FaCheckCircle, FaSort } from 'react-icons/fa';
 import SummaryCard from './SummaryCard'; // Importamos el componente de tarjeta
@@ -26,7 +27,7 @@ const SalesReportView: React.FC = () => {
         <div className="p-8 bg-dark-bg min-h-screen text-gray-100">
             
             {/* Título y Descripción */}
-            <h1 className="text-3xl font-bold mb-2 flex items-center text-white">
+            <h1 className="text-3xl font-bold mb-2 flex items-center text-black">
                 <FaChartLine className="mr-3 text-sky-400" /> Reporte de Ventas Detallado
             </h1>
             <p className="text-gray-400 mb-6">
@@ -34,14 +35,14 @@ const SalesReportView: React.FC = () => {
             </p>
 
             {/* Bloque de Filtros y Botón Generar Reporte */}
-            <div className="bg-gray-800 p-4 rounded-lg shadow-md mb-8 flex flex-wrap items-center gap-4">
+            <div className="bg-white p-4 rounded-lg shadow-md mb-8 flex flex-wrap items-center gap-4">
                 
                 {/* Campos de Fecha (Simulación) */}
                 <div className="flex items-center gap-2">
                     <FaCalendarAlt className="text-gray-400 w-4 h-4" />
                     <input type="text" value={startDate} onChange={(e) => setStartDate(e.target.value)} 
                            className="p-2 rounded-md border border-gray-600 bg-gray-900 text-white focus:ring-sky-500 focus:border-sky-500 w-32" />
-                    <span className="text-gray-300">al</span>
+                    <span className="text-black">al</span>
                     <input type="text" value={endDate} onChange={(e) => setEndDate(e.target.value)} 
                            className="p-2 rounded-md border border-gray-600 bg-gray-900 text-white focus:ring-sky-500 focus:border-sky-500 w-32" />
                 </div>

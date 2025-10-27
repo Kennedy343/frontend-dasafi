@@ -1,4 +1,5 @@
 // src/components/RoleManagementTable.tsx (CÓDIGO FINAL CON ESTILO DE IMAGEN Y TEMA CLARO)
+// Gestion de roles 
 
 import React from 'react';
 // Importamos los íconos necesarios

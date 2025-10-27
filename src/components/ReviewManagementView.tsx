@@ -1,4 +1,5 @@
 // src/components/ReviewManagementView.tsx
+// gestion de reseñas
 
 import type { FC } from 'react';
 // Importamos los iconos necesarios para las acciones de Publicar y Rechazar:
@@ -53,7 +54,7 @@ const ReviewManagementView: FC = () => {
         <div className="p-8 bg-dark-bg min-h-screen text-gray-100">
             
             {/* Título y Descripción */}
-            <h1 className="text-3xl font-bold mb-2 flex items-center text-white">
+            <h1 className="text-3xl font-bold mb-2 flex items-center text-black">
                 <FaStar className="mr-3 text-sky-400" /> Gestión de Reseñas
             </h1>
             <p className="text-gray-400 mb-6">
@@ -70,8 +71,8 @@ const ReviewManagementView: FC = () => {
             </div>
 
             {/* Sección de la Tabla de Reseñas */}
-            <section className="bg-gray-800 p-6 rounded-lg shadow-xl">
-                <h2 className="text-xl font-semibold mb-4 text-white">Reseñas Recientes</h2>
+            <section className="bg-white p-6 rounded-lg shadow-xl">
+                <h2 className="text-xl font-semibold mb-4 text-black">Reseñas Recientes</h2>
                 
                 <div className="overflow-x-auto">
                     <table className="min-w-full divide-y divide-gray-700">

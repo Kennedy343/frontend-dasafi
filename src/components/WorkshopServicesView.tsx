@@ -1,4 +1,5 @@
 // src/components/WorkshopServicesView.tsx
+// servicios de taller y ordenes 
 import type { FC } from 'react';
 import { FaWrench, FaPlus, FaHistory, FaEdit, FaTrash } from 'react-icons/fa';
 
@@ -45,7 +46,7 @@ const WorkshopServicesView: FC = () => {
         <div className="p-8 bg-dark-bg min-h-screen text-gray-100">
             
             {/* Título y Descripción */}
-            <h1 className="text-3xl font-bold mb-2 flex items-center text-white">
+            <h1 className="text-3xl font-bold mb-2 flex items-center text-black">
                 <FaWrench className="mr-3 text-sky-400" /> Servicios de Taller y Órdenes
             </h1>
             <p className="text-gray-400 mb-6">
@@ -69,8 +70,8 @@ const WorkshopServicesView: FC = () => {
             </div>
 
             {/* Sección de la Tabla de Órdenes Activas */}
-            <section className="bg-gray-800 p-6 rounded-lg shadow-xl">
-                <h2 className="text-xl font-semibold mb-4 text-white">Órdenes de Servicio Activas</h2>
+            <section className="bg-white p-6 rounded-lg shadow-xl">
+                <h2 className="text-xl font-semibold mb-4 text-black">Órdenes de Servicio Activas</h2>
                 
                 <div className="overflow-x-auto">
                     <table className="min-w-full divide-y divide-gray-700">
